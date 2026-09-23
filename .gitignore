@@ -1,0 +1,8 @@
+# JetBrains Academy / EduTools metadata
+*-info.yaml
+*-remote-info.yaml
+.courseignore
+.venv/
+
+# JetBrains IDE configuration folder
+.idea/
