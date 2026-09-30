@@ -1,0 +1,961 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Arrays",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 1,
+              "name": "Two Sum",
+              "completed": true
+            },
+            {
+              "id": 2,
+              "name": "Best Time to Buy and Sell Stock",
+              "completed": false
+            },
+            {
+              "id": 3,
+              "name": "Contains Duplicate",
+              "completed": false
+            },
+            {
+              "id": 4,
+              "name": "Maximum Subarray",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 5,
+              "name": "Product of Array Except Self",
+              "completed": false
+            },
+            {
+              "id": 6,
+              "name": "3Sum",
+              "completed": false
+            },
+            {
+              "id": 7,
+              "name": "Container With Most Water",
+              "completed": false
+            },
+            {
+              "id": 8,
+              "name": "Subarray Sum Equals K",
+              "completed": false
+            },
+            {
+              "id": 9,
+              "name": "Set Matrix Zeroes",
+              "completed": false
+            },
+            {
+              "id": 10,
+              "name": "Spiral Matrix",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 11,
+              "name": "Trapping Rain Water",
+              "completed": false
+            },
+            {
+              "id": 12,
+              "name": "First Missing Positive",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "topic": "Strings",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 13,
+              "name": "Valid Anagram",
+              "completed": false
+            },
+            {
+              "id": 14,
+              "name": "Valid Palindrome",
+              "completed": false
+            },
+            {
+              "id": 15,
+              "name": "Longest Common Prefix",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 16,
+              "name": "Longest Substring Without Repeating Characters",
+              "completed": false
+            },
+            {
+              "id": 17,
+              "name": "Group Anagrams",
+              "completed": false
+            },
+            {
+              "id": 18,
+              "name": "Longest Repeating Character Replacement",
+              "completed": false
+            },
+            {
+              "id": 19,
+              "name": "Longest Palindromic Substring",
+              "completed": false
+            },
+            {
+              "id": 20,
+              "name": "Palindromic Substrings",
+              "completed": false
+            },
+            {
+              "id": 21,
+              "name": "String to Integer (atoi)",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 22,
+              "name": "Minimum Window Substring",
+              "completed": false
+            },
+            {
+              "id": 23,
+              "name": "Edit Distance",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "topic": "Linked List",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 24,
+              "name": "Reverse Linked List",
+              "completed": false
+            },
+            {
+              "id": 25,
+              "name": "Merge Two Sorted Lists",
+              "completed": false
+            },
+            {
+              "id": 26,
+              "name": "Linked List Cycle",
+              "completed": false
+            },
+            {
+              "id": 27,
+              "name": "Middle of the Linked List",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 28,
+              "name": "Remove Nth Node From End of List",
+              "completed": false
+            },
+            {
+              "id": 29,
+              "name": "Reorder List",
+              "completed": false
+            },
+            {
+              "id": 30,
+              "name": "Add Two Numbers",
+              "completed": false
+            },
+            {
+              "id": 31,
+              "name": "Copy List with Random Pointer",
+              "completed": false
+            },
+            {
+              "id": 32,
+              "name": "Swap Nodes in Pairs",
+              "completed": false
+            },
+            {
+              "id": 33,
+              "name": "Sort List",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 34,
+              "name": "Reverse Nodes in K-Group",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "topic": "Trees and Tries",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 35,
+              "name": "Maximum Depth of Binary Tree",
+              "completed": false
+            },
+            {
+              "id": 36,
+              "name": "Invert Binary Tree",
+              "completed": false
+            },
+            {
+              "id": 37,
+              "name": "Same Tree",
+              "completed": false
+            },
+            {
+              "id": 38,
+              "name": "Subtree of Another Tree",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 39,
+              "name": "Binary Tree Level Order Traversal",
+              "completed": false
+            },
+            {
+              "id": 40,
+              "name": "Validate Binary Search Tree",
+              "completed": false
+            },
+            {
+              "id": 41,
+              "name": "Lowest Common Ancestor of a Binary Search Tree",
+              "completed": false
+            },
+            {
+              "id": 42,
+              "name": "Diameter of Binary Tree",
+              "completed": false
+            },
+            {
+              "id": 43,
+              "name": "Kth Smallest Element in a BST",
+              "completed": false
+            },
+            {
+              "id": 44,
+              "name": "Construct Binary Tree from Preorder and Inorder Traversal",
+              "completed": false
+            },
+            {
+              "id": 45,
+              "name": "Implement Trie",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 46,
+              "name": "Binary Tree Maximum Path Sum",
+              "completed": false
+            },
+            {
+              "id": 47,
+              "name": "Word Search II",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "topic": "Stacks and Queues",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 48,
+              "name": "Valid Parentheses",
+              "completed": false
+            },
+            {
+              "id": 49,
+              "name": "Implement Queue Using Stacks",
+              "completed": false
+            },
+            {
+              "id": 50,
+              "name": "Implement Stack Using Queues",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 51,
+              "name": "Min Stack",
+              "completed": false
+            },
+            {
+              "id": 52,
+              "name": "Evaluate Reverse Polish Notation",
+              "completed": false
+            },
+            {
+              "id": 53,
+              "name": "Daily Temperatures",
+              "completed": false
+            },
+            {
+              "id": 54,
+              "name": "Decode String",
+              "completed": false
+            },
+            {
+              "id": 55,
+              "name": "Asteroid Collision",
+              "completed": false
+            },
+            {
+              "id": 56,
+              "name": "Car Fleet",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 57,
+              "name": "Largest Rectangle in Histogram",
+              "completed": false
+            },
+            {
+              "id": 58,
+              "name": "Sliding Window Maximum",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "topic": "Graphs",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 59,
+              "name": "Flood Fill",
+              "completed": false
+            },
+            {
+              "id": 60,
+              "name": "Find if Path Exists in Graph",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 61,
+              "name": "Number of Islands",
+              "completed": false
+            },
+            {
+              "id": 62,
+              "name": "Clone Graph",
+              "completed": false
+            },
+            {
+              "id": 63,
+              "name": "Rotting Oranges",
+              "completed": false
+            },
+            {
+              "id": 64,
+              "name": "Course Schedule",
+              "completed": false
+            },
+            {
+              "id": 65,
+              "name": "Pacific Atlantic Water Flow",
+              "completed": false
+            },
+            {
+              "id": 66,
+              "name": "Number of Connected Components in an Undirected Graph",
+              "completed": false
+            },
+            {
+              "id": 67,
+              "name": "Redundant Connection",
+              "completed": false
+            },
+            {
+              "id": 68,
+              "name": "Network Delay Time",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 69,
+              "name": "Word Ladder",
+              "completed": false
+            },
+            {
+              "id": 70,
+              "name": "Swim in Rising Water",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "topic": "Dynamic Programming and Recursion",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 71,
+              "name": "Climbing Stairs",
+              "completed": false
+            },
+            {
+              "id": 72,
+              "name": "Fibonacci Number",
+              "completed": false
+            },
+            {
+              "id": 73,
+              "name": "Min Cost Climbing Stairs",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 74,
+              "name": "House Robber",
+              "completed": false
+            },
+            {
+              "id": 75,
+              "name": "House Robber II",
+              "completed": false
+            },
+            {
+              "id": 76,
+              "name": "Coin Change",
+              "completed": false
+            },
+            {
+              "id": 77,
+              "name": "Unique Paths",
+              "completed": false
+            },
+            {
+              "id": 78,
+              "name": "Longest Increasing Subsequence",
+              "completed": false
+            },
+            {
+              "id": 79,
+              "name": "Longest Common Subsequence",
+              "completed": false
+            },
+            {
+              "id": 80,
+              "name": "Partition Equal Subset Sum",
+              "completed": false
+            },
+            {
+              "id": 81,
+              "name": "Combination Sum",
+              "completed": false
+            },
+            {
+              "id": 82,
+              "name": "Subsets",
+              "completed": false
+            },
+            {
+              "id": 83,
+              "name": "Permutations",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 84,
+              "name": "Burst Balloons",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "topic": "Heaps",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 85,
+              "name": "Last Stone Weight",
+              "completed": false
+            },
+            {
+              "id": 86,
+              "name": "Kth Largest Element in a Stream",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 87,
+              "name": "Kth Largest Element in an Array",
+              "completed": false
+            },
+            {
+              "id": 88,
+              "name": "Top K Frequent Elements",
+              "completed": false
+            },
+            {
+              "id": 89,
+              "name": "K Closest Points to Origin",
+              "completed": false
+            },
+            {
+              "id": 90,
+              "name": "Task Scheduler",
+              "completed": false
+            },
+            {
+              "id": 91,
+              "name": "Reorganize String",
+              "completed": false
+            },
+            {
+              "id": 92,
+              "name": "Find K Pairs with Smallest Sums",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 93,
+              "name": "Find Median from Data Stream",
+              "completed": false
+            },
+            {
+              "id": 94,
+              "name": "Merge K Sorted Lists",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "topic": "Hashing",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 95,
+              "name": "Happy Number",
+              "completed": false
+            },
+            {
+              "id": 96,
+              "name": "Ransom Note",
+              "completed": false
+            },
+            {
+              "id": 97,
+              "name": "Isomorphic Strings",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 98,
+              "name": "Encode and Decode Strings",
+              "completed": false
+            },
+            {
+              "id": 99,
+              "name": "Insert Delete GetRandom O(1)",
+              "completed": false
+            },
+            {
+              "id": 100,
+              "name": "Find All Anagrams in a String",
+              "completed": false
+            },
+            {
+              "id": 101,
+              "name": "Valid Sudoku",
+              "completed": false
+            },
+            {
+              "id": 102,
+              "name": "Contiguous Array",
+              "completed": false
+            },
+            {
+              "id": 103,
+              "name": "Brick Wall",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 104,
+              "name": "Max Points on a Line",
+              "completed": false
+            },
+            {
+              "id": 105,
+              "name": "Longest Duplicate Substring",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "topic": "Bit Manipulation",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 106,
+              "name": "Single Number",
+              "completed": false
+            },
+            {
+              "id": 107,
+              "name": "Number of 1 Bits",
+              "completed": false
+            },
+            {
+              "id": 108,
+              "name": "Counting Bits",
+              "completed": false
+            },
+            {
+              "id": 109,
+              "name": "Missing Number",
+              "completed": false
+            },
+            {
+              "id": 110,
+              "name": "Reverse Bits",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 111,
+              "name": "Sum of Two Integers",
+              "completed": false
+            },
+            {
+              "id": 112,
+              "name": "Bitwise AND of Numbers Range",
+              "completed": false
+            },
+            {
+              "id": 113,
+              "name": "Single Number II",
+              "completed": false
+            },
+            {
+              "id": 114,
+              "name": "Divide Two Integers",
+              "completed": false
+            },
+            {
+              "id": 115,
+              "name": "Gray Code",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 116,
+              "name": "Maximum XOR of Two Numbers in an Array",
+              "completed": false
+            },
+            {
+              "id": 117,
+              "name": "Minimum One Bit Operations to Make Integers Zero",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "topic": "Sorting",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 118,
+              "name": "Merge Sorted Array",
+              "completed": false
+            },
+            {
+              "id": 119,
+              "name": "Sort Array By Parity",
+              "completed": false
+            },
+            {
+              "id": 120,
+              "name": "Squares of a Sorted Array",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 121,
+              "name": "Sort an Array",
+              "completed": false
+            },
+            {
+              "id": 122,
+              "name": "Merge Intervals",
+              "completed": false
+            },
+            {
+              "id": 123,
+              "name": "Insert Interval",
+              "completed": false
+            },
+            {
+              "id": 124,
+              "name": "Sort Colors",
+              "completed": false
+            },
+            {
+              "id": 125,
+              "name": "Largest Number",
+              "completed": false
+            },
+            {
+              "id": 126,
+              "name": "Sort Characters By Frequency",
+              "completed": false
+            },
+            {
+              "id": 127,
+              "name": "H-Index",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 128,
+              "name": "Count of Smaller Numbers After Self",
+              "completed": false
+            },
+            {
+              "id": 129,
+              "name": "Reverse Pairs",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "topic": "Searching",
+      "categories": [
+        {
+          "difficulty": "Easy",
+          "problems": [
+            {
+              "id": 130,
+              "name": "Binary Search",
+              "completed": false
+            },
+            {
+              "id": 131,
+              "name": "Search Insert Position",
+              "completed": false
+            },
+            {
+              "id": 132,
+              "name": "First Bad Version",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Medium",
+          "problems": [
+            {
+              "id": 133,
+              "name": "Search in Rotated Sorted Array",
+              "completed": false
+            },
+            {
+              "id": 134,
+              "name": "Find Minimum in Rotated Sorted Array",
+              "completed": false
+            },
+            {
+              "id": 135,
+              "name": "Search a 2D Matrix",
+              "completed": false
+            },
+            {
+              "id": 136,
+              "name": "Koko Eating Bananas",
+              "completed": false
+            },
+            {
+              "id": 137,
+              "name": "Find First and Last Position of Element in Sorted Array",
+              "completed": false
+            },
+            {
+              "id": 138,
+              "name": "Find Peak Element",
+              "completed": false
+            },
+            {
+              "id": 139,
+              "name": "Time Based Key-Value Store",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "difficulty": "Hard",
+          "problems": [
+            {
+              "id": 140,
+              "name": "Median of Two Sorted Arrays",
+              "completed": false
+            },
+            {
+              "id": 141,
+              "name": "Split Array Largest Sum",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
