@@ -4,7 +4,7 @@ This repository houses my solutions, edge-case tests, and time/space complexity 
 
 ## 📊 Study Dashboard
 *   **Target Language:** Python 🐍
-*   **Overall Progress:** 0 / 92 Problems Completed
+*   **Overall Progress:** 0 / 141 Problems Completed
 *   **Current Focus:** Week 1 — Arrays
 
 ---
@@ -257,5 +257,3 @@ This repository houses my solutions, edge-case tests, and time/space complexity 
 ### 🔴 Hard
 - [ ] Median of Two Sorted Arrays
 - [ ] Split Array Largest Sum
-
----
