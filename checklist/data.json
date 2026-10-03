@@ -25,7 +25,7 @@
             {
               "id": 4,
               "name": "Maximum Subarray",
-              "completed": false
+              "completed": true
             }
           ]
         },
@@ -35,7 +35,7 @@
             {
               "id": 5,
               "name": "Product of Array Except Self",
-              "completed": false
+              "completed": true
             },
             {
               "id": 6,

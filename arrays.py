@@ -101,3 +101,86 @@ def containsDuplicate(nums: list[int]) -> bool:
 print(containsDuplicate([1, 2, 3, 1]))
 print(containsDuplicate([1, 2, 3, 4]))
 print(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
+
+# Given an integer array nums, find the subarray with the largest sum, and return its sum.
+#
+# Example 1:
+# Input: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+# Output: 6
+# Explanation: The subarray[4, -1, 2, 1] has the largest sum 6.
+#
+# Example 2:
+# Input: nums = [1]
+# Output: 1
+# Explanation: The subarray[1] has the largest sum 1.
+#
+# Example 3:
+# Input: nums = [5, 4, -1, 7, 8] Output: 23 Explanation: The subarray[5, 4, -1, 7, 8] has the largest sum 23.
+#
+# Constraints:
+# 1 <= nums.length <= 105
+# -104 <= nums[i] <= 104
+
+# Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+def maxSubArray(nums: list[int]) -> int:
+    if not nums:
+        return 0
+
+    max_current, max_global = nums[0], nums[0]
+
+    for element in nums[1:]:
+        # calculate the current max sum; start a new subarray if current element is higher
+        max_current = max(element, max_current + element)
+
+        # calculate global max subarray
+        max_global = max(max_global, max_current)
+
+    return max_global
+
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+print(maxSubArray([1]))
+print(maxSubArray([5, 4, -1, 7, 8]))
+
+# Given an integer array nums, return an array answer such that answer[i] is equal to the product
+# of all the elements of nums except nums[i].
+# The product of any prefix or suffix of nums is guaranteed to fit in a 32 - bit integer.
+#
+# You must write an algorithm that runs in O(n) time and without using the division operation.
+#
+# Example 1:
+# Input: nums = [1, 2, 3, 4]
+# Output: [24, 12, 8, 6]
+#
+# Example 2:
+# Input: nums = [-1, 1, 0, -3, 3]
+# Output: [0, 0, 9, 0, 0]
+#
+# Constraints:
+# 2 <= nums.length <= 10**5
+# -30 <= nums[i] <= 30)
+# The input is generated such that answer[i] is guaranteed to fit in a 32 - bit integer.
+#
+# Follow up: Can you solve the problem in O(1) extra space complexity?
+# (The output array does not count as extra space for space complexity analysis.)
+def productExceptSelf(nums: list[int]) -> list[int]:
+    n = len(nums)
+    left_multi = 1
+    right_multi = 1
+    left_arr = [0] * n
+    right_arr = [0] * n
+    ans = []
+
+    for i in range(n):
+        j = n - 1 - i
+        left_arr[i] = left_multi
+        right_arr[j] = right_multi
+        left_multi *= nums[i]
+        right_multi *= nums[j]
+
+    for i in range(n):
+        ans.append(left_arr[i] * right_arr[i])
+
+    return ans
+
+print(productExceptSelf([1,2,3,4]))
+print(productExceptSelf([-1,1,0,-3,3]))
