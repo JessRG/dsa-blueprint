@@ -319,3 +319,53 @@ def subarraySum(nums: List[int], k: int) -> int:
 
 print(subarraySum([1, 8, 6, 2, 5, 4, 8, 3, 7], 3))
 print(subarraySum([2, 3, -5, 5, -5, 1, 4], 5))
+
+# Set Matrix Zeroes
+# Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+# You must do it in place.
+
+# Example 1:
+# Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+# Output: [[1,0,1],[0,0,0],[1,0,1]]
+
+# Example 2:
+# Input: matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
+# Output: [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
+
+# Constraints:
+# m == matrix.length
+# n == matrix[0].length
+# 1 <= m, n <= 200
+# -231 <= matrix[i][j] <= 231 - 1
+def setZeroes(matrix: list[list[int]]) -> None:
+    """
+    Do not return anything, modify matrix in-place instead.
+    """
+    m = len(matrix)
+    n = len(matrix[0])
+
+    # store 0 cell positions
+    marked = []
+    for r in range(m):
+        for c in range(n):
+            if matrix[r][c] == 0:
+                marked.append((r, c))
+
+    for pos in marked:
+        row, col = pos[0], pos[1]
+        # set zeroes to the left of marked position
+        for c in range(col - 1, -1, -1):
+            matrix[row][c] = 0
+        # set zeroes to the right of marked position
+        for c in range(col + 1, n):
+            matrix[row][c] = 0
+        # set zeroes of above rows
+        for r in range(row - 1, -1, -1):
+            matrix[r][col] = 0
+        # set zeroes of below rows
+        for r in range(row + 1, m):
+            matrix[r][col] = 0
+    print(matrix)
+
+setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
+setZeroes([[1,1,1],[1,0,1],[1,1,1]])
