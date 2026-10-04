@@ -344,27 +344,41 @@ def setZeroes(matrix: list[list[int]]) -> None:
     m = len(matrix)
     n = len(matrix[0])
 
-    # store 0 cell positions
-    marked = []
-    for r in range(m):
-        for c in range(n):
-            if matrix[r][c] == 0:
-                marked.append((r, c))
+    has_row_zero = False
+    has_col_zero = False
 
-    for pos in marked:
-        row, col = pos[0], pos[1]
-        # set zeroes to the left of marked position
-        for c in range(col - 1, -1, -1):
-            matrix[row][c] = 0
-        # set zeroes to the right of marked position
-        for c in range(col + 1, n):
-            matrix[row][c] = 0
-        # set zeroes of above rows
-        for r in range(row - 1, -1, -1):
-            matrix[r][col] = 0
-        # set zeroes of below rows
-        for r in range(row + 1, m):
-            matrix[r][col] = 0
+    # Step 1: scan first row for any zeroes
+    for c in range(n):
+        if matrix[0][c] == 0:
+            has_row_zero = True
+            break
+    # Step 2: scan first column for any zeroes
+    for r in range(m):
+        if matrix[r][0] == 0:
+            has_col_zero = True
+            break
+
+    # Step 3: set state trackers on first row/col for inner matrix
+    for r in range(1, m):
+        for c in range(1, n):
+            if matrix[r][c] == 0:
+                matrix[r][0] = 0
+                matrix[0][c] = 0
+
+    # Step 4: use first row/col as state trackers for inner matrix
+    for r in range(1, m):
+        for c in range(1, n):
+            if matrix[0][c] == 0 or matrix[r][0] == 0:
+                matrix[r][c] = 0
+    # Step 5: zero out first row if it originally had a zero
+    if has_row_zero:
+        for c in range(n):
+            matrix[0][c] = 0
+    # Step6: zero out first col if it originally had a zero
+    if has_col_zero:
+        for r in range(m):
+            matrix[r][0] = 0
+
     print(matrix)
 
 setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
