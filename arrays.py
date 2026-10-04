@@ -9,6 +9,8 @@
 # Explanation: Because
 # nums[0] + nums[1] == 9, we
 # return [0, 1].
+from typing import List
+
 
 # Example 2:
 # Input: nums = [3, 2, 4], target = 6
@@ -283,3 +285,37 @@ def maxArea(height: list[int]) -> int:
 
 print(maxArea([1,8,6,2,5,4,8,3,7]))
 print(maxArea([1,1]))
+
+# Subarray Sum Equals K
+# Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+# A subarray is a contiguous non - empty sequence of elements within an array.
+
+# Example 1:
+# Input: nums = [1, 1, 1], k = 2
+# Output: 2
+#
+# Example 2:
+# Input: nums = [1, 2, 3], k = 3
+# Output: 2
+#
+# Constraints:
+# 1 <= nums.length <= 2 * 104
+# -1000 <= nums[i] <= 1000
+# -107 <= k <= 107
+def subarraySum(nums: List[int], k: int) -> int:
+    count = 0
+    prefix_sum = 0
+    prefix_freq_map = {0: 1}
+
+    for num in nums:
+        prefix_sum += num
+
+        if (prefix_sum - k) in prefix_freq_map:
+            count += prefix_freq_map.get(prefix_sum - k)
+
+        prefix_freq_map[prefix_sum] = prefix_freq_map.get(prefix_sum, 0) + 1
+
+    return count
+
+print(subarraySum([1, 8, 6, 2, 5, 4, 8, 3, 7], 3))
+print(subarraySum([2, 3, -5, 5, -5, 1, 4], 5))
