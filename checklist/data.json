@@ -60,7 +60,7 @@
             {
               "id": 10,
               "name": "Spiral Matrix",
-              "completed": false
+              "completed": true
             }
           ]
         },

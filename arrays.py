@@ -1,3 +1,4 @@
+from typing import List
 # Two Sum
 # You are given an array of integers nums and an integer target, return indices of the two numbers
 # such that they add up to target. You may assume that each input would have exactly one solution,
@@ -9,13 +10,11 @@
 # Explanation: Because
 # nums[0] + nums[1] == 9, we
 # return [0, 1].
-from typing import List
-
-
+#
 # Example 2:
 # Input: nums = [3, 2, 4], target = 6
 # Output: [1, 2]
-
+#
 # Example 3:
 # Input: nums = [3, 3], target = 6
 # Output: [0, 1]
@@ -44,7 +43,7 @@ print(twoSum([3,2,4], 6))
 # You are given an array prices where prices[i] is the price of a given stock on the ith day.
 # You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 # Return the maximum profit you can achieve from this transaction.If you cannot achieve any profit, return 0.
-
+#
 # Example 1:
 # Input: prices = [7, 1, 5, 3, 6, 4]
 # Output: 5
@@ -71,17 +70,17 @@ print(maxProfit([7,6,4,3,1]))
 # Contains Duplicate
 # Given an integer array nums, return true if any value appears at least twice in the array,
 # and return false if every element is distinct.
-
+#
 # Example 1:
 # Input: nums = [1, 2, 3, 1]
 # Output: true
 # Explanation: The element 1 occurs at the indices 0 and 3.
-
+#
 # Example 2:
 # Input: nums = [1, 2, 3, 4]
 # Output: false
 # Explanation: All elements are distinct.
-
+#
 # Example 3:
 # Input: nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 # Output: true
@@ -120,7 +119,7 @@ print(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
 # Constraints:
 # 1 <= nums.length <= 105
 # -104 <= nums[i] <= 104
-
+#
 # Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 def maxSubArray(nums: list[int]) -> int:
     if not nums:
@@ -188,24 +187,24 @@ print(productExceptSelf([-1,1,0,-3,3]))
 # Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k,
 # and nums[i] + nums[j] + nums[k] == 0.
 # Notice that the solution set must not contain duplicate triplets.
-
+#
 # Example 1:
 # Input: nums = [-1, 0, 1, 2, -1, -4]
 # Output: [[-1, -1, 2], [-1, 0, 1]]
 # Explanation: nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0. nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
 # nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0. The distinct triplets are[-1, 0, 1] and [-1, -1, 2].
 # Notice that the order of the output and the order of the triplets does not matter.
-
+#
 # Example 2:
 # Input: nums = [0, 1, 1]
 # Output: []
 # Explanation: The only possible triplet does not sum up to 0.
-
+#
 # Example 3:
 # Input: nums = [0, 0, 0]
 # Output: [[0, 0, 0]]
 # Explanation: The only possible triplet sums up to 0.
-
+#
 # Constraints:
 # 3 <= nums.length <= 3000
 # -105 <= nums[i] <= 105
@@ -250,13 +249,13 @@ def threeSum(nums: list[int]) -> list[list[int]]:
 # Find two lines that together with the x-axis form a container, such that the container contains the most water.
 # Return the maximum amount of water a container can store.
 # Notice that you may not slant the container.
-
+#
 # Example 1:
 # Input: height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 # Output: 49
 # Explanation: The above vertical lines are represented by array[1, 8, 6, 2, 5, 4, 8, 3, 7].
 # In this case, the max area of water(blue section) the container can contain is 49.
-
+#
 # Example 2:
 # Input: height = [1, 1]
 # Output: 1
@@ -289,7 +288,7 @@ print(maxArea([1,1]))
 # Subarray Sum Equals K
 # Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
 # A subarray is a contiguous non - empty sequence of elements within an array.
-
+#
 # Example 1:
 # Input: nums = [1, 1, 1], k = 2
 # Output: 2
@@ -323,15 +322,15 @@ print(subarraySum([2, 3, -5, 5, -5, 1, 4], 5))
 # Set Matrix Zeroes
 # Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 # You must do it in place.
-
+#
 # Example 1:
 # Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
 # Output: [[1,0,1],[0,0,0],[1,0,1]]
-
+#
 # Example 2:
 # Input: matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
 # Output: [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
-
+#
 # Constraints:
 # m == matrix.length
 # n == matrix[0].length
@@ -383,3 +382,56 @@ def setZeroes(matrix: list[list[int]]) -> None:
 
 setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
 setZeroes([[1,1,1],[1,0,1],[1,1,1]])
+
+# Spiral Matrix
+# Given an m x n matrix, return all elements of the matrix in spiral order.
+#
+# Example 1:
+# Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+# Output: [1,2,3,6,9,8,7,4,5]
+#
+# Example 2:
+# Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+# Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+#
+# Constraints:
+# m == matrix.length
+# n == matrix[i].length
+# 1 <= m, n <= 10
+# -100 <= matrix[i][j] <= 100
+def spiralOrder(matrix: List[List[int]]) -> List[int]:
+    result = []
+    m = len(matrix)
+    n = len(matrix[0]) if matrix else 0
+    top = 0
+    bottom = m - 1
+    left = 0
+    right = n - 1
+
+    while left <= right and top <= bottom:
+        # Traverse from left to right on top row
+        for col in range(left, right + 1):
+            result.append(matrix[top][col])
+        top += 1
+
+        # Traverse from top to bottom on right column
+        for row in range(top, bottom + 1):
+            result.append(matrix[row][right])
+        right -= 1
+
+        # Traverse from right to left on bottom row
+        # CRITICAL: Since we just updated 'top' and 'right', we must double-check
+        # that our boundaries haven't accidentally crossed before moving backward.
+        if top <= bottom:
+            for col in range(right, left - 1, -1):
+                result.append(matrix[bottom][col])
+            bottom -= 1
+
+        # Traverse bottom to top on left column
+        # CRITICAL: Since we just updated 'top' and 'right', we must double-check
+        # that our boundaries haven't accidentally crossed before moving backward.
+        if left <= right:
+            for row in range(bottom, top - 1, -1):
+                result.append(matrix[row][left])
+            left += 1
+    return result
