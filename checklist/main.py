@@ -7,7 +7,7 @@ def main():
         # Initialize standard backend file system manager logic
         tracker_manager = ChecklistManager("data.json")
 
-        # Instantiate and transition application context context window view targeting into Tkinter UI
+        # Instantiate and transition application context window view targeting into Tkinter UI
         app_interface = TkinterInterface(tracker_manager)
         app_interface.start_loop()
     except FileNotFoundError as err:
