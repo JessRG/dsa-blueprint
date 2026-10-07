@@ -120,7 +120,8 @@ print(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
 # 1 <= nums.length <= 105
 # -104 <= nums[i] <= 104
 #
-# Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+# Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer
+# approach, which is more subtle.
 def maxSubArray(nums: list[int]) -> int:
     if not nums:
         return 0
@@ -435,3 +436,70 @@ def spiralOrder(matrix: List[List[int]]) -> List[int]:
                 result.append(matrix[row][left])
             left += 1
     return result
+
+# Trapping Rain Water
+# Given n non-negative integers representing an elevation map where the width of each bar is 1,
+# compute how much water it can trap after raining.
+#
+# Example 1
+# Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+# Output: 6
+# Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1].
+# In this case, 6 units of rain water (blue section) are being trapped.
+def trap(height: list[int]) -> int:
+    left_wall = right_wall = 0
+    n = len(height)
+    max_left = [0] * n
+    max_right = [0] * n
+
+    for i in range(n):
+        j = n - 1 - i
+        max_left[i] = left_wall
+        max_right[j] = right_wall
+        left_wall = max(left_wall, height[i])
+        right_wall = max(right_wall, height[j])
+
+    summ = 0
+    for i in range(n):
+        water = min(max_left[i], max_right[i])
+        summ += max(0, water - height[i])
+
+    return summ
+
+# First Missing Positive
+# Given an unsorted integer array nums.Return the smallest positive integer that is not present in nums.
+# You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
+#
+# Example 1:
+# Input: nums = [1, 2, 0]
+# Output: 3
+# Explanation: The numbers in the range[1, 2] are all in the array.
+#
+# Example 2:
+# Input: nums = [3, 4, -1, 1]
+# Output: 2
+# Explanation: 1 is in the array but 2 is missing.
+#
+# Example 3:
+# Input: nums = [7, 8, 9, 11, 12]
+# Output: 1
+# Explanation: The smallest positive integer 1 is missing.
+#
+# Constraints:
+# 1 <= nums.length <= 105
+# -231 <= nums[i] <= 231 - 1
+def firstMissingPositive(nums: list[int]) -> int:
+    n = len(nums)
+
+    # Sort elements to their correct positions
+    for idx in range(n):
+        while 1 <= nums[idx] <= n and nums[nums[idx] - 1] != nums[idx]:
+            correct_idx = nums[idx] - 1
+            nums[idx], nums[correct_idx] = nums[correct_idx], nums[idx]
+
+    # Find mismatched element
+    for idx in range(n):
+        if nums[idx] != idx + 1:
+            return idx + 1
+
+    return n + 1

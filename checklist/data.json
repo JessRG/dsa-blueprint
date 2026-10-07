@@ -70,12 +70,12 @@
             {
               "id": 11,
               "name": "Trapping Rain Water",
-              "completed": false
+              "completed": true
             },
             {
               "id": 12,
               "name": "First Missing Positive",
-              "completed": false
+              "completed": true
             }
           ]
         }
