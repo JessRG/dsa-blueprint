@@ -101,7 +101,7 @@
             {
               "id": 15,
               "name": "Longest Common Prefix",
-              "completed": false
+              "completed": true
             }
           ]
         },

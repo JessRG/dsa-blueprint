@@ -1,5 +1,3 @@
-import re
-
 # Valid Anagram
 # Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 #
@@ -17,24 +15,24 @@ import re
 #
 # Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 from collections import defaultdict
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
+def isAnagram(s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+
+    freq = defaultdict(int)
+
+    # Count frequencies in s
+    for char in s:
+        freq[char] += 1
+
+    # Decrement and check early for t
+    for char in t:
+        freq[char] -= 1
+        if freq[char] < 0:
             return False
 
-        freq = defaultdict(int)
-
-        # Count frequencies in s
-        for char in s:
-            freq[char] += 1
-
-        # Decrement and check early for t
-        for char in t:
-            freq[char] -= 1
-            if freq[char] < 0:
-                return False
-
-        return True
+    return True
+print(isAnagram(s="anagram", t="nagaram"))
 
 # Valid Palindrome
 # A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all
@@ -60,6 +58,7 @@ class Solution:
 # Constraints:
 # 1 <= s.length <= 2 * 105
 # s consists only of printable ASCII characters.
+import re
 def isPalindrome(s: str) -> bool:
     s_str = re.sub(r'[^a-zA-Z0-9]', "", s)
     s_str = s_str.lower()
@@ -73,3 +72,40 @@ def isPalindrome(s: str) -> bool:
         right -= 1
 
     return True
+print(isPalindrome("A man, a plan, a canal: Panama"))
+
+# Longest Common Prefix
+# Write a function to find the longest common prefix string amongst an array of strings.
+# If there is no common prefix, return an empty string "".
+#
+# Example 1:
+# Input: strs = ["flower", "flow", "flight"]
+# Output: "fl"
+#
+# Example 2:
+# Input: strs = ["dog", "racecar", "car"]
+# Output: ""
+# Explanation: There is no common prefix among the input strings.
+#
+# Constraints:
+# 1 <= strs.length <= 200
+# 0 <= strs[i].length <= 200
+# strs[i] consists of only lowercase English letters if it is non - empty.
+def longestCommonPrefix(strs: list[str]) -> str:
+    min_len = float('inf')
+
+    # Get the smallest string length
+    for word in strs:
+        min_len = min(min_len, len(word))
+
+    # Loop through letters by index of smallest string length
+    i = 0
+    while i < min_len:
+        char = strs[0][i]
+        for s in strs:
+            if s[i] != char:
+                return s[:i]
+        i += 1
+
+    return strs[0][:i]
+print(longestCommonPrefix(["flower", "flow", "flight"]))
