@@ -109,3 +109,40 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
     return strs[0][:i]
 print(longestCommonPrefix(["flower", "flow", "flight"]))
+
+# Longest Substring Without Repeating Characters
+# Given a string s, find the length of the longest substring without duplicate characters.
+#
+# Example 1:
+# Input: s = "abcabcbb"
+# Output: 3
+# Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
+#
+# Example 2:
+# Input: s = "bbbbb"
+# Output: 1
+# Explanation: The answer is "b", with the length of 1.
+#
+# Example 3:
+# Input: s = "pwwkew"
+# Output: 3
+# Explanation: The answer is "wke", with the length of 3.
+# Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+#
+# Constraints:
+# 0 <= s.length <= 105
+# s consists of English letters, digits, symbols and spaces.
+def lengthOfLongestSubstring(s: str) -> int:
+    maxx = 0
+    start = 0
+    letter_set = set()
+
+    for window_end in range(len(s)):
+        while s[window_end] in letter_set:
+            letter_set.remove(s[start])
+            start += 1
+        letter_set.add(s[window_end])
+        maxx = max(maxx, window_end - start + 1)
+
+    return maxx
+print(lengthOfLongestSubstring("pwwkew"))
