@@ -136,7 +136,7 @@
             {
               "id": 21,
               "name": "String to Integer (atoi)",
-              "completed": false
+              "completed": true
             }
           ]
         },
@@ -146,7 +146,7 @@
             {
               "id": 22,
               "name": "Minimum Window Substring",
-              "completed": false
+              "completed": true
             },
             {
               "id": 23,
