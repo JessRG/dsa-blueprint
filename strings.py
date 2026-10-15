@@ -512,7 +512,7 @@ def minDistance(word1: str, word2: str) -> int:
         if word1[i] == word2[j]:
             cache[(i, j)] = dfs(i + 1, j + 1)
         else:
-            # if mismatch, perform insert,
+            # if characters mismatch, consider all 3 possible edit operations
             res = 1 + min(dfs(i, j + 1),  # insert
                           dfs(i + 1, j),  # delete
                           dfs(i + 1, j + 1))  # replace
@@ -521,3 +521,41 @@ def minDistance(word1: str, word2: str) -> int:
         return cache[(i, j)]
 
     return dfs(0, 0)
+
+def minDistanceTabulation(word1: str, word2: str) -> int:
+    m, n = len(word1), len(word2)
+    # Initialize a 2D grid of size (m+1) x (n+1) with zeros.
+    # cache[i][j] will store the minimum edit distance for word1[0...i-1] and word2[0...j-1].
+    cache = [[0] * (n + 1) for _ in range(m + 1)]
+
+    # Base Case 1: If word1 is empty (length 0), transforming it into word2
+    # of length j requires exactly j insertions.
+    for j in range(n + 1):
+        cache[0][j] = j
+
+    # Base Case 2: If word2 is empty (length 0), transforming word1
+    # of length i into it requires exactly i deletions.
+    for i in range(m + 1):
+        cache[i][0] = i
+
+    # traverse cache grid
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            # match in both words; assign diagonal cell value
+            if word1[i - 1] == word2[j - 1]:
+                cache[i][j] = cache[i - 1][j - 1]
+            else:
+                # If characters mismatch, consider all 3 possible edit operations
+                # from previously solved subproblems and take the minimum cost + 1:
+                # 1. cache[i][j - 1]  -> Insert a character into word1
+                # 2. cache[i - 1][j]  -> Delete a character from word1
+                # 3. cache[i - 1][j - 1] -> Replace a character in word1
+                cache[i][j] = 1 + min(
+                    cache[i][j - 1],    # insert
+                    cache[i - 1][j],    # delete
+                    cache[i - 1][j - 1] # replace
+                )
+    # The bottom-right cell contains the final answer for the full lengths of both words.
+    return cache[m][n]
+# print(minDistance("intention", "execution"))
+print(minDistanceTabulation("intention", "execution"))
