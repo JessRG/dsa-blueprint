@@ -462,3 +462,62 @@ def minWindow(s: str, t: str) -> str:
             left += 1
     return best_substring
 print(minWindow("cabwefgewcwaefgcf", "cae"))
+
+# Edit Distance
+# Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+# You have the following three operations permitted on a word:
+# Insert a character
+# Delete a character
+# Replace a character
+#
+# Example 1:
+# Input: word1 = "horse", word2 = "ros"
+# Output: 3
+# Explanation:
+# horse -> rorse(replace 'h' with 'r')
+# rorse -> rose(remove 'r')
+# rose -> ros(remove 'e')
+#
+# Example 2:
+# Input: word1 = "intention", word2 = "execution"
+# Output: 5
+# Explanation:
+# intention -> inention(remove 't')
+# inention -> enention(replace 'i' with 'e')
+# enention -> exention(replace 'n' with 'x')
+# exention -> exection(replace 'n' with 'c')
+# exection -> execution(insert 'u')
+#
+# Constraints:
+# 0 <= word1.length, word2.length <= 500
+# word1 and word2 consist of lowercase English letters.
+def minDistance(word1: str, word2: str) -> int:
+    m, n = len(word1), len(word2)
+    # cache to perform memoization (top-down)
+    cache = {}
+
+    def dfs(i, j):
+        # if word1 is exhausted
+        if i == m:
+            return n - j
+        # if word2 is exhausted
+        if j == n:
+            return m - i
+
+        # check our cache for current for state at i and j
+        if (i, j) in cache:
+            return cache[(i, j)]
+
+        # if characters are equal; move to next characters
+        if word1[i] == word2[j]:
+            cache[(i, j)] = dfs(i + 1, j + 1)
+        else:
+            # if mismatch, perform insert,
+            res = 1 + min(dfs(i, j + 1),  # insert
+                          dfs(i + 1, j),  # delete
+                          dfs(i + 1, j + 1))  # replace
+            cache[(i, j)] = res
+
+        return cache[(i, j)]
+
+    return dfs(0, 0)

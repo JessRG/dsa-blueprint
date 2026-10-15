@@ -151,7 +151,7 @@
             {
               "id": 23,
               "name": "Edit Distance",
-              "completed": false
+              "completed": true
             }
           ]
         }
